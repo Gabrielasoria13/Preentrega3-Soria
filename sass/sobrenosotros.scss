@@ -1,0 +1,11 @@
+.main_sn_img{
+    width: 30rem;
+    padding: 1rem;
+    
+}
+@media screen and (max-width:768px){
+    .main_sn_img{
+        width: 15rem;
+        padding: 1rem;
+    }
+}

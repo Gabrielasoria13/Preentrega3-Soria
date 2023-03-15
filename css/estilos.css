@@ -1,0 +1,292 @@
+header {
+  grid-area: header;
+  background-color: #fcfbba;
+  position: sticky;
+  width: 100%;
+  height: 20vh;
+  top: 0;
+}
+header nav {
+  height: 100%;
+}
+header nav .navbar_ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+header nav .navbar_ul .navbar_ul_li {
+  list-style-type: none;
+  margin: 20px;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  text-align: center center;
+}
+header nav .navbar_ul .navbar_ul_li .logo_imagen {
+  width: 120px;
+  height: 100px;
+  border-radius: 20px;
+  background-size: contain;
+}
+
+main {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+main .imagen_opaca {
+  background-position: center center;
+  height: 20rem;
+  width: 30rem;
+  opacity: 0.5;
+  overflow: auto;
+}
+main .imagen_opaca:hover {
+  opacity: 1;
+}
+main .main_titulo {
+  color: rgb(91, 68, 221);
+  margin: 30px;
+  text-align: center center;
+}
+main .main_p {
+  color: rgb(91, 68, 221);
+  font-size: 20px;
+  margin: 30px;
+  text-align: center center;
+}
+
+footer {
+  grid-area: footer;
+  font-family: "Dancing Script", cursive;
+  background-color: #d1cbfc;
+  background-position: bottom;
+}
+footer .footer_ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+footer .footer_ul .footer_ul_li {
+  padding-top: 0, 5rem;
+  margin: 0.5rem;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #grid_container {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: "header" "main" "footer";
+  }
+  header {
+    grid-area: header;
+    background-color: #fcfbba;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  header nav {
+    height: 100%;
+  }
+  header nav .navbar_ul {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+  header nav .navbar_ul .navbar_ul_li {
+    list-style-type: none;
+    margin: 5px;
+    font-family: "Dancing Script", cursive;
+    font-size: 15px;
+    text-align: center center;
+  }
+  header nav .navbar_ul .navbar_ul_li .logo_imagen {
+    width: 80px;
+    height: 60px;
+    border-radius: 20px;
+    background-size: contain;
+    position: absolute;
+    left: 40px;
+  }
+  main {
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+  }
+  main .imagen_opaca {
+    background-position: center center;
+    height: 10rem;
+    width: 20rem;
+  }
+  main .main_titulo {
+    color: rgb(91, 68, 221);
+    font-size: 15px;
+    text-align: center center;
+  }
+  main .main_p {
+    color: rgb(91, 68, 221);
+    font-size: 13px;
+    text-align: center center;
+  }
+  footer {
+    grid-area: footer;
+    font-family: "Dancing Script", cursive;
+    background-color: #d1cbfc;
+    background-position: bottom;
+  }
+  footer .footer_ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  footer .footer_ul .footer_ul_li {
+    padding-top: 0, 5rem;
+    margin: 0.5rem;
+    font-size: 10px;
+  }
+}
+.container_formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 20px;
+}
+
+.main_sn_img {
+  width: 30rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main_sn_img {
+    width: 15rem;
+    padding: 1rem;
+  }
+}
+.section_servicios {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  text-align: center center;
+}
+.section_servicios .section_servicios_salon {
+  color: rgb(91, 68, 221);
+  padding: 1rem;
+}
+.section_servicios .section_servicios_parrilla {
+  color: rgb(91, 68, 221);
+  padding: 1rem;
+}
+.section_servicios .img_servicios {
+  height: 300px;
+  height: 300px;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section_servicios_salon {
+    color: rgb(91, 68, 221);
+    padding: 1rem;
+    font-size: 12px;
+  }
+  .section_servicios_salon .img_servicios {
+    height: 100px;
+    height: 100px;
+    padding: 0.5rem;
+  }
+  .section_servicios_parrilla {
+    color: rgb(91, 68, 221);
+    padding: 1rem;
+    font-size: 12px;
+  }
+  .section_servicios_parrilla .img_servicios {
+    height: 100px;
+    height: 100px;
+    padding: 0.5rem;
+  }
+}
+.section_galeria {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.section_galeria .section_galeria_img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  text-align: center center;
+  width: 50px;
+  height: 400px;
+}
+.section_galeria .section_galeria_img:hover {
+  cursor: crosshair;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+@media screen and (max-width: 768px) {
+  .section_galeria {
+    flex-direction: column;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem;
+  }
+  .section_galeria .section_galeria_img {
+    opacity: 1;
+    padding: 0;
+    width: 200px;
+    height: 150px;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+}
+.main_comollegar_iframe {
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .main_comollegar_iframe {
+    width: 15rem;
+    height: 10rem;
+    padding: 10px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  background-color: #FFADAD;
+  font-family: "Dancing Script", cursive;
+}
+
+/*# sourceMappingURL=estilos.css.map */

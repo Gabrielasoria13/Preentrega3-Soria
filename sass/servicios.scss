@@ -1,0 +1,39 @@
+.section_servicios{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    text-align: center center;
+    .section_servicios_salon{color: rgb(91, 68, 221);
+        padding: 1rem;
+    }
+    .section_servicios_parrilla{color: rgb(91, 68, 221);
+        padding: 1rem;
+    }
+    .img_servicios{
+    height: 300px;
+    height: 300px;
+    padding: 2rem;
+    }
+
+}
+@media screen and (max-width:768px){
+    
+        .section_servicios_salon{color: rgb(91, 68, 221);
+            padding: 1rem;
+            font-size: 12px;
+            .img_servicios{
+                height: 100px;
+                height: 100px;
+                padding: 0.5rem;
+                }
+        }
+        .section_servicios_parrilla{color: rgb(91, 68, 221);
+            padding: 1rem;
+            font-size: 12px;
+            .img_servicios{
+                height: 100px;
+                height: 100px;
+                padding: 0.5rem;
+                }
+        }
+}

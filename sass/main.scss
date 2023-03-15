@@ -1,0 +1,17 @@
+@use 'index';
+@use 'contacto';
+@use 'sobrenosotros';
+@use 'servicios';
+@use 'galeria';
+@use 'comollegar';
+
+*{margin:0;
+    padding: 0;
+    }
+html{
+    font-size: 62,5%;
+}
+body{
+    background-color: #FFADAD;
+    font-family: 'Dancing Script', cursive;
+}
