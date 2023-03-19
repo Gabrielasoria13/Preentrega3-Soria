@@ -4,6 +4,7 @@
 @use 'servicios';
 @use 'galeria';
 @use 'comollegar';
+@use 'variables';
 
 *{margin:0;
     padding: 0;
@@ -12,6 +13,9 @@ html{
     font-size: 62,5%;
 }
 body{
-    background-color: #FFADAD;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/105/2/530/the-sky-clouds-balls-joy-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     font-family: 'Dancing Script', cursive;
 }
