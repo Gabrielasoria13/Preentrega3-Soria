@@ -8,14 +8,17 @@
 
 *{margin:0;
     padding: 0;
+    box-sizing: border-box;
     }
-html{
+html{height: 100%;
     font-size: 62,5%;
 }
 body{
     background-image: url(https://p4.wallpaperbetter.com/wallpaper/105/2/530/the-sky-clouds-balls-joy-wallpaper-preview.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center center;
     font-family: 'Dancing Script', cursive;
+    height: 100vh;
+    width: 100vw;
 }
