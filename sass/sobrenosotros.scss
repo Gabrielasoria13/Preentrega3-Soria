@@ -1,49 +1,123 @@
 @use 'variables';
-
-.section_servicios{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    text-align: center center;
-    .section_servicios_salon{color: variables.$color;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-    .section_servicios_parrilla{color: variables.$color;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-    .img_servicios{
-    height: 300px;
-    padding: 2rem;
-    border-radius: 10px;
-    }
-
+@mixin tamanios($ancho,$alto){
+    width: $ancho;
+    height: $alto;
 }
-.main_sn_img{
-    width: 30rem;
-    padding: 1rem;
-    border-radius: 20px;
-    
+#grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
 }
-@media screen and (max-width:768px){
-    .main_sn_img{
-        width: 15rem;
-        padding: 1rem;
+header{
+    grid-area: header;
+    background-color: #fcfbba;
+    position: sticky;
+    width: 100%;
+    top: 0;
     }
-    .section_servicios_salon{
-        padding: 1rem;
-        
-        h4{
-            font-size: 13px;
+main{
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+
+    .section_servicios{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+        text-align: center center;
+        .section_servicios_salon{color: variables.$color;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .section_servicios_parrilla{color: variables.$color;
+            padding: 1rem;
+            box-sizing: border-box;
         }
         .img_servicios{
-            height: 100px;
-            padding: 0.5rem;
+        height: 300px;
+        padding: 2rem;
+        border-radius: 10px;
+        }
+    }
+    .main_sn_img{
+        width: 30rem;
+        padding: 1rem;
+        border-radius: 20px;
+        
+    }
+}
+footer{
+    grid-area: footer;
+    font-family: variables.$font-titulo;
+    background-color: #d1cbfc;
+    margin-top: auto;
+    height: 10rem;
+    h3{
+        font-size: 20px;
+        text-align: center;
+        background-color: #b7b1e9;
+    }
+    .container-flex{
+        display: flex;
+        .ul_footer {
+        list-style-type: none;
+        text-align: center;
+        margin: auto;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        .redes_sociales{
+            flex-direction: column;
+            }
+        .footer_ul_li{
+            padding-top: 0,5rem;
+            margin: 0.5rem;    
+            font-size: 15px;
+            .img{
+                background-size: contain;
+                @include tamanios(80px,60px);
+            }
             }
         }
-        .section_servicios_parrilla{
+    }  
+}
+
+@media screen and (max-width:768px){
+    #grid_container{
+        display: grid;
+        grid-template-rows: 1fr 6fr 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    header{
+        grid-area: header;
+        background-color: #fcfbba;
+        width: 100%;
+        height: 100%;
+        top: 0;}
+     main{
+        grid-area: main;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        border-radius: 30px;    
+        .main_sn_img{
+            width: 15rem;
             padding: 1rem;
+        }
+        .section_servicios_salon{
+            padding: 1rem;
+            
             h4{
                 font-size: 13px;
             }
@@ -51,6 +125,35 @@
                 height: 100px;
                 padding: 0.5rem;
                 }
+            }
+            .section_servicios_parrilla{
+                padding: 1rem;
+                h4{
+                    font-size: 13px;
+                }
+                .img_servicios{
+                    height: 100px;
+                    padding: 0.5rem;
+                }
+            }
         }
-}
-
+    }
+    footer{
+        grid-area: footer;
+        font-family: variables.$font-titulo;
+        background-color: #d1cbfc;
+        background-position: bottom;
+        .footer_ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            .footer_ul_li{padding-top: 0,5rem;
+                margin: 0.5rem;    
+                font-size: 10px;
+                }
+            }
+        }
